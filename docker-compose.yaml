@@ -1,0 +1,23 @@
+version: "3"
+services:
+  zapatos-example:
+    image: "node:14.8.0"
+    container_name: "zapatos-example"
+    ports:
+      - "4000:4000"
+    volumes:
+     - .:/src
+    command: ["sleep", "inf"]
+    environment:
+     - CONN_STR=postgresql://tempuser:temppass@pgdb/tempdb?sslmode=disable
+
+  pgdb:
+    image: postgres:12.3
+    volumes:
+      - ./init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+      - ./data/pgdb:/database
+    environment:
+      POSTGRES_DB: tempdb
+      POSTGRES_USER: tempuser
+      POSTGRES_PASSWORD: temppass
+      PGDATA: /database

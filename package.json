@@ -1,0 +1,22 @@
+{
+  "name": "zapatos-example",
+  "version": "1.0.0",
+  "description": "Trying to replicate a typescript error in zapatos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahil87/zapatos-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/pg": "^7.14.4",
+    "pg": "^8.3.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7",
+    "zapatos": "^0.1.52"
+  }
+}
