@@ -13,3 +13,7 @@ cd /src;
 npm install;
 $(npm bin)/ts-node src/index.ts
 ```
+
+## Diagnosis
+
+Need to enable `"strict": true` in tsconfig.json to fix the error.
